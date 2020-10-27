@@ -1,0 +1,85 @@
+:root{
+    --hue:200;
+    --surface: hsl(var(--hue)20% 10%);
+    --surface1: hsl(var(--hue)100%);
+    --surface2 : hsl(var(--hue)20% 95%);
+
+    --text: hsl(var(--hue)20% 90%);
+    --text2: hsl(var(--hue)30% 30%);
+    --text3: hsl(var(--hue)20% 20%);  
+}
+
+body{
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2rem;
+
+    display: grid;
+    place-content: center;
+    background-color: var(--surface2);
+    color: var(--text1);
+    font-family: sans-serif, system-ui;
+
+}
+
+section{
+    border: 1px solid hsl(0 0% 80%);
+    border-radius: 1ex;
+    background-color: var(--surface1);
+    padding: 2rem;
+}
+.overflow-x{
+    overflow: auto;
+    overscroll-behavior-x: contain;
+    border: 1px solid hsl(0 0% 80%);
+    border-radius: 1ex;
+    background-color: var(--surface1);
+    padding: 2rem;
+    
+}
+
+.friends-story-list{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 13ch;
+    gap: 2rem;
+}
+
+figure{
+    display: grid;
+    gap: 1ex;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+ figure:hover{
+     transform: scale(1.1);
+ }
+picture{
+    display: inline-block;
+    inline-size: 13ch;
+    block-size: 13ch;
+    border-radius: 50%;
+    background:
+    radial-gradient(white 65%, transparent 0),
+    linear-gradient(to top right, orange , deeppink)
+}
+
+img{
+    inline-size: 90%;
+    block-size: 100%;
+    object-fit: cover;
+    clip-path: circle(47%);
+
+}
+
+figcaption{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    font-weight: 600;
+}
+
